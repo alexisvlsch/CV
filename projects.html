@@ -5,33 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projets - Alexis Viallesseche</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-    }
-    .project-card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    .project-card h3 {
-      color: #003366;
-      margin-bottom: 10px;
-    }
-    .project-card p {
-      font-size: 0.95rem;
-      color: #444;
-    }
-  </style>
 </head>
 <body>
   <nav>
@@ -46,20 +19,20 @@
 
   <main class="container">
     <h1>Mes Projets</h1>
-    <section class="projects-grid">
-      <div class="project-card">
+    <div class="projects-grid">
+      <article class="project-card">
         <h3>Robot suiveur de ligne</h3>
-        <p>Un robot autonome construit en club, capable de suivre un tracé noir grâce à des capteurs infrarouges. A l'aide de l'intégration d'une IA légère, ce robot est capable de retenir les pièges d'un labirynthe pour trouver la sortie d'un coup lors de la réintroduction de celui-ci à l'entré du labyrinthe.</p>
-      </div>
-      <div class="project-card">
+        <p>Un robot autonome construit en club, capable de suivre un tracé noir grâce à des capteurs infrarouges...</p>
+      </article>
+      <article class="project-card">
         <h3>Automatisation jeux de société</h3>
-        <p>Avec mon club robotique au Village des Sciences, j'ai pu automatiser un jeu de nim comprenant un plateau de jeu manipulant des pieces de manière autonome et un système où une personne joue contre un ordinateur ayant été programmé pour savoir gagner dans toutes les conditions. </p>
-      </div>
-      <div class="project-card">
+        <p>Avec mon club robotique au Village des Sciences, j'ai pu automatiser un jeu de nim...</p>
+      </article>
+      <article class="project-card">
         <h3>Capsule vidéo</h3>
-        <p>Lors de mon projet d'automatisation d'une horloge astrolabique, j'ai confectionné sous formes de petites vidéos explicatives, tout le fonctionnement de notre perception du système solaire. Dans ces vidéos des termes comme sphère céleste,  horizon locale, cercle ecliptique, astrolabe, déclinaison, temps sidérale... sont évoqué et expliqué. Dans le but final d'expliquer le fonctionnement d'un astrolabe automatisé en horloge.</p>
-      </div>
-    </section>
+        <p>Lors de mon projet d'automatisation d'une horloge astrolabique, j'ai confectionné sous formes de petites vidéos explicatives...</p>
+      </article>
+    </div>
   </main>
 
   <footer>
