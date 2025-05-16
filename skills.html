@@ -2,62 +2,145 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Compétences - Alexis Viallesseche</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Compétences</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 280px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flip-card-front {
+      background-color: #ffffff;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .flip-card-back {
+      background-color: #2196F3;
+      color: white;
+      transform: rotateY(180deg);
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="gallery.html">Galerie</a></li>
-      <li><a href="skills.html">Compétences</a></li>
-      <li><a href="projects.html">Projets</a></li>
-    </ul>
-  </nav>
 
-  <main class="container skills-section">
-    <h1>Compétences</h1>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <img src="images/skills/espritequipe.png" alt="Esprit d'equipe">
-        <p>Esprit d'equipe</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/programmation.png" alt="Programmation">
-        <p>Programmation</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/service.png" alt="Service">
-        <p>Service</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/teamwork.png" alt="Travail en équipe">
-        <p>Travail en équipe</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/creativity.png" alt="Créativité">
-        <p>Créativité</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/experience.png" alt="Expérience">
-        <p>Expérience</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/solution.png" alt="Solution">
-        <p>Résolution de problèmes</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/skills/quality.png" alt="Qualité">
-        <p>Qualité</p>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Langages de programmation</div>
+      <div class="flip-card-back">
+        Python, Java, PHP, HTML/CSS, C
       </div>
     </div>
-  </main>
+  </div>
 
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Bureautique</div>
+      <div class="flip-card-back">
+        Word, Excel, PowerPoint
+      </div>
+    </div>
+  </div>
 
-  <footer>
-    &copy; 2025 Alexis Viallesseche. Tous droits réservés.
-  </footer>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Systèmes</div>
+      <div class="flip-card-back">
+        Linux, Windows
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Outils</div>
+      <div class="flip-card-back">
+        Git, IntelliJ, VS Code, Figma, PostgreSQL
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Développement</div>
+      <div class="flip-card-back">
+        Web, orienté objet, conception de base de données
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Qualités personnelles</div>
+      <div class="flip-card-back">
+        Communication, écoute, travail en équipe, ponctualité,<br>
+        motivation, autonomie, curiosité, analyse, dynamisme,<br>
+        responsabilité, gestion du stress, attitude positive
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Diplômes</div>
+      <div class="flip-card-back">
+        Brevet des collèges, Baccalauréat, BIA (Brevet d'Initiation Aéronautique)
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Activités</div>
+      <div class="flip-card-back">
+        Représentant des jeunes chez Vives la Science, rugby, musculation,<br>
+        organisation d'évènement,<br>
+        résolution de problèmes, apprentissage rapide
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
