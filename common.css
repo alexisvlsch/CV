@@ -1,0 +1,94 @@
+/* Réinitialisation et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+  color: #1f1f1f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+/* Navigation */
+nav {
+  background: linear-gradient(to right, #004080, #007acc);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+nav li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Styles communs pour les sections */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  background: #e0ecf5;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+h1, h2, h3 {
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; border-bottom: 2px solid #0058a3; padding-bottom: 0.5rem; }
+h3 { font-size: 1.5rem; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f2f4f7;
+  color: #666;
+  margin-top: auto;
+}
+
+/* Media queries communes */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
