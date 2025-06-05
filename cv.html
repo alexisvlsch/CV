@@ -20,6 +20,22 @@
   <main class="container">
     <h1>CV d'Alexis Viallesseche</h1>
     
+    <div class="download-wrapper">
+      <div class="container">
+        <label class="label">
+          <input type="checkbox" class="input" onclick="downloadCV()" />
+          <span class="circle">
+            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+            </svg>
+            <div class="square"></div>
+          </span>
+          <p class="title">Download</p>
+          <p class="title">Open</p>
+        </label>
+      </div>
+    </div>
+
     <section class="profile">
       <img src="images/photoprofil.jpeg" alt="Photo de profil" width="200" height="200">
       <div class="info-perso">
@@ -52,5 +68,20 @@
   <footer>
     &copy; 2025 Alexis Viallesseche. Tous droits réservés.
   </footer>
+
+  <script>
+    function downloadCV() {
+      // Créer un lien vers votre fichier PDF
+      const link = document.createElement('a');
+      link.href = 'documents/CV_Alexis_Viallesseche.pdf'; // Chemin vers votre fichier PDF
+      link.download = 'CV_Alexis_Viallesseche.pdf';
+      
+      // Simuler un clic pour déclencher le téléchargement
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+  
 </body>
 </html>
