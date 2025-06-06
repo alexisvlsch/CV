@@ -92,3 +92,156 @@ footer {
     text-align: center;
   }
 }
+
+/* Configuration pour le thème clair/sombre */
+:root {
+  --background-color: #f0f4f8;
+  --text-color: #1f1f1f;
+  --nav-bg: linear-gradient(to right, #004080, #007acc);
+  --card-bg: white;
+  --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --footer-bg: #f2f4f7;
+  --heading-color: #003366;
+}
+
+.dark-mode {
+  --background-color: #1a1a2e;
+  --text-color: #e6e6e6;
+  --nav-bg: linear-gradient(to right, #0f2a4a, #004080);
+  --card-bg: #252545;
+  --card-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  --footer-bg: #131326;
+  --heading-color: #4d8ce3;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav {
+  background: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Style pour le conteneur du bouton de thème */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+/* Styles pour le toggle button */
+.l {
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.75em;
+  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
+  color: #fdea7b;
+  display: inline-flex;
+  align-items: center;
+  margin: auto;
+  padding: 0.15em;
+  width: 3em;
+  height: 1.5em;
+  transition:
+    background-color 0.1s 0.3s ease-out,
+    box-shadow 0.1s 0.3s ease-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.l:before,
+.l:after {
+  content: "";
+  display: block;
+}
+
+.l:before {
+  background-color: #d7d7d7;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  transition:
+    background-color 0.1s 0.3s ease-out,
+    transform 0.3s ease-out;
+  z-index: 1;
+}
+
+.l:after {
+  background:
+    linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%,
+    repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%)
+      0 50% / 50% 100%,
+    radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+  background-repeat: no-repeat;
+  border: 0.25em solid transparent;
+  border-left: 0.4em solid #d8d8d8;
+  border-right: 0 solid transparent;
+  transition:
+    border-left-color 0.1s 0.3s ease-out,
+    transform 0.3s ease-out;
+  transform: translateX(-22.5%);
+  transform-origin: 25% 50%;
+  width: 1.2em;
+  height: 1em;
+  box-sizing: border-box;
+}
+
+/* Checked */
+.l:checked {
+  background-color: rgba(0, 0, 0, 0.45);
+  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
+}
+
+.l:checked:before {
+  background-color: currentColor;
+  transform: translateX(125%);
+}
+
+.l:checked:after {
+  border-left-color: currentColor;
+  transform: translateX(-2.5%) rotateY(180deg);
+}
+
+/* Other States */
+.l:focus {
+  outline: 0;
+}
+
+/* Adaptation pour les éléments du site en mode sombre */
+.card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+footer {
+  background: var(--footer-bg);
+  transition: background 0.3s ease;
+}
+
+/* Ajustement pour la navigation sur mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .theme-switch {
+    margin-top: 0.5rem;
+  }
+}
