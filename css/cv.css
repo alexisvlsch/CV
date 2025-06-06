@@ -70,7 +70,7 @@
 
 .button {
   position: relative;
-  width: 150px;
+  width: 250px;
   height: 40px;
   cursor: pointer;
   display: flex;
@@ -93,7 +93,7 @@
 
 .button .button__icon {
   position: absolute;
-  transform: translateX(109px);
+  transform: translateX(209px);
   height: 100%;
   width: 39px;
   background-color: #004080;
@@ -116,7 +116,7 @@
 }
 
 .button:hover .button__icon {
-  width: 148px;
+  width: 248px;
   transform: translateX(0);
 }
 
