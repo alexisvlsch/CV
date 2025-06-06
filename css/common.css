@@ -23,19 +23,16 @@ body {
   flex: 1;
 }
 
-/* Navigation */
-nav {
-  background: linear-gradient(to right, #004080, #007acc);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 1rem 0;
-}
+
 
 nav ul {
+  position: absolute; /* Ajout de cette propriété pour positionner le menu */
+  left: 50%;
+  transform: translateX(-50%);
   list-style: none;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 nav li a {
@@ -126,10 +123,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative; /* Ajout de cette propriété */
 }
 
 /* Style pour le conteneur du bouton de thème */
 .theme-switch {
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -159,9 +159,18 @@ footer {
     flex-direction: column;
     gap: 1rem;
   }
+
+  nav ul {
+    position: static; /* Retour à une position normale sur mobile */
+    transform: none;
+    justify-content: center;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
   
   .theme-switch {
-    margin-top: 0.5rem;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
