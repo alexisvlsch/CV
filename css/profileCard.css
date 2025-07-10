@@ -35,6 +35,8 @@
   touch-action: none;
   width: 280px;
   margin: 0 auto;
+  justify-self: start;
+  margin-left: 2rem;
 }
 
 .pc-card-wrapper::before {
