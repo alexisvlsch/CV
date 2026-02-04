@@ -92,7 +92,7 @@ body {
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(540deg);
+    transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -139,4 +139,39 @@ header {
     position: relative;
     z-index: 10;
     pointer-events: auto;
+}
+
+.dark-mode body {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+}
+
+.dark-mode .hexagon-container {
+    background-color: #1a1a2e;
+}
+
+.dark-mode .hexagon::before {
+    background-color: #333;
+}
+
+.dark-mode .hexagon::after {
+    background-color: #1a1a2e;
+}
+
+.dark-mode .hexagon:hover::before {
+    background-color: #2196F3;
+}
+
+.dark-mode .hexagon:hover::after {
+    background-color: #16213e;
+}
+
+.dark-mode .flip-card-front {
+    background-color: #252545;
+    color: #e6e6e6;
+}
+
+.dark-mode footer {
+    background: #131326;
+    color: #999;
 }

@@ -17,3 +17,10 @@
 .project-card:hover {
   transform: translateY(-5px);
 }
+
+/* Mode sombre */
+.dark-mode .project-card {
+  background: #252545;
+  color: #e6e6e6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}

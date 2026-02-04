@@ -18,3 +18,9 @@
 .gallery-item img:hover {
   transform: scale(1.03);
 }
+
+/* Mode sombre */
+.dark-mode .gallery-item img {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  border: 1px solid #333;
+}

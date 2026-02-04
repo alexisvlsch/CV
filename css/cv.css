@@ -127,3 +127,38 @@
 .button:active {
   border: 1px solid #003366;
 }
+
+/* Mode sombre */
+.dark-mode .profile {
+  background: #252545;
+}
+
+.dark-mode .profile img {
+  border-color: #2196F3;
+}
+
+.dark-mode .experience-list li:before,
+.dark-mode .formation-list li:before {
+  color: #2196F3;
+}
+
+.dark-mode .button {
+  border-color: #2196F3;
+  background-color: #2196F3;
+}
+
+.dark-mode .button .button__icon {
+  background-color: #1976D2;
+}
+
+.dark-mode .button:hover {
+  background: #1976D2;
+}
+
+.dark-mode .button:active .button__icon {
+  background-color: #0D47A1;
+}
+
+.dark-mode .button:active {
+  border-color: #0D47A1;
+}

@@ -241,3 +241,14 @@ input:checked + .toggle-slider:after {
   left: 6px;
   right: auto;
 }
+
+/* View Transition API styles */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-group(root) {
+  animation-duration: 400ms;
+}
