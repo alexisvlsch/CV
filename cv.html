@@ -17,11 +17,26 @@
       <li><a href="skills.html">Compétences</a></li>
       <li><a href="projects.html">Projets</a></li>
     </ul>
-    <div class="theme-switch">
-      <span>Mode</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="darkModeToggle" />
-        <span class="toggle-slider"></span>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch">
+        <input type="checkbox" class="theme-switch__checkbox" id="darkModeToggle" />
+        <div class="theme-switch__container">
+          <div class="theme-switch__clouds"></div>
+          <div class="theme-switch__stars-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.007C135.055 3.85 134.111 4.299 133 4.354C134.111 4.41 135.055 4.859 135.831 5.712C136.608 6.557 137 7.561 137 8.727C137 7.561 137.392 6.557 138.169 5.712C138.945 4.859 139.889 4.41 141 4.354C139.889 4.299 138.945 3.85 138.169 3.007C137.392 2.153 137 1.15 137 0C137 1.15 136.608 2.153 135.831 3.007ZM123.831 23.007C123.055 23.85 122.111 24.299 121 24.354C122.111 24.41 123.055 24.859 123.831 25.712C124.608 26.557 125 27.561 125 28.727C125 27.561 125.392 26.557 126.169 25.712C126.945 24.859 127.889 24.41 129 24.354C127.889 24.299 126.945 23.85 126.169 23.007C125.392 22.153 125 21.15 125 20C125 21.15 124.608 22.153 123.831 23.007ZM133.031 43.007C132.488 43.85 131.748 44.299 130.711 44.354C131.748 44.41 132.488 44.859 133.031 45.712C133.574 46.557 133.846 47.561 133.846 48.727C133.846 47.561 134.118 46.557 134.661 45.712C135.204 44.859 135.944 44.41 136.981 44.354C135.944 44.299 135.204 43.85 134.661 43.007C134.118 42.153 133.846 41.15 133.846 40C133.846 41.15 133.574 42.153 133.031 43.007Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="theme-switch__circle-container">
+            <div class="theme-switch__sun-moon-container">
+              <div class="theme-switch__moon">
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </label>
     </div>
   </nav>
