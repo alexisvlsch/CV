@@ -33,7 +33,7 @@
   transform: translate3d(0, 0, 0.1px);
   position: relative;
   touch-action: none;
-  width: 280px;
+  width: 300px;
   margin: 0 auto;
   justify-self: start;
   margin-left: 2rem;
@@ -65,8 +65,9 @@
 }
 
 .pc-card {
-  height: 50svh;
-  max-height: 320px;
+  height: 55svh;
+  max-height: 380px;
+  min-height: 320px;
   display: grid;
   aspect-ratio: 0.718;
   border-radius: var(--card-radius);
@@ -277,12 +278,20 @@
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
+  text-decoration: none;
+  display: inline-block;
+  background: transparent;
 }
 
 .pc-contact-btn:hover {
   border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-1px);
   transition: all 0.2s ease;
+}
+
+.pc-user-info a,
+.pc-user-info button {
+  pointer-events: auto;
 }
 
 .pc-content {
