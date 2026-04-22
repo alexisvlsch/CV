@@ -36,7 +36,6 @@
   width: 320px;
   margin: 0 auto;
   justify-self: start;
-  margin-left: 2rem;
 }
 
 .pc-card-wrapper::before {
@@ -51,6 +50,7 @@
   transform: scale(0.8) translate3d(0, 0, 0.1px);
   background-size: 100% 100%;
   background-image: var(--behind-gradient);
+  opacity: 0;
 }
 
 .pc-card-wrapper:hover,
@@ -62,6 +62,7 @@
 .pc-card-wrapper.active::before {
   filter: contrast(1) saturate(2) blur(40px) opacity(1);
   transform: scale(0.9) translate3d(0, 0, 0.1px);
+  opacity: 1;
 }
 
 .pc-card {
@@ -101,6 +102,7 @@
   background-image: var(--inner-gradient);
   background-color: rgba(0, 0, 0, 0.9);
   transform: translate3d(0, 0, 0.01px);
+  border-radius: calc(var(--card-radius) - 1px);
 }
 
 .pc-shine {
