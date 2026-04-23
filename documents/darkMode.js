@@ -24,50 +24,12 @@ function updateToggleButton() {
   }
 }
 
-// Toggle avec animation split-vertical
-async function toggleTheme() {
-  const duration = 400;
-  
-  // Vérifier si l'API View Transition est supportée
-  if (!document.startViewTransition) {
-    // Fallback sans animation
-    isDark = !isDark;
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    updateToggleButton();
-    return;
-  }
-
-  // Utiliser View Transition API
-  await document.startViewTransition(() => {
-    isDark = !isDark;
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    updateToggleButton();
-  }).ready;
-
-  // Animation split-vertical
-  document.documentElement.animate(
-    [{ opacity: 0 }, { opacity: 1 }],
-    {
-      duration: duration * 0.75,
-      easing: "ease-in",
-      pseudoElement: "::view-transition-new(root)",
-    }
-  );
-  
-  document.documentElement.animate(
-    [
-      { clipPath: 'inset(0 0 0 0)', transform: 'none' },
-      { clipPath: 'inset(0 40% 0 40%)', transform: 'scale(1.2)' },
-      { clipPath: 'inset(0 50% 0 50%)', transform: 'scale(1)' },
-    ],
-    {
-      duration: duration * 1.5,
-      easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
-      pseudoElement: "::view-transition-old(root)",
-    }
-  );
+// Toggle sans animation
+function toggleTheme() {
+  isDark = !isDark;
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  updateToggleButton();
 }
 
 // Initialiser au chargement de la page
