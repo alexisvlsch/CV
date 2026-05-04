@@ -23,10 +23,8 @@ body {
     pointer-events: none;
 }
 
-.content h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0;
+main.container {
+    flex: none;
 }
 
 .flip-card {
