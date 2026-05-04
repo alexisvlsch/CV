@@ -23,6 +23,12 @@ body {
     pointer-events: none;
 }
 
+.content h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
 .flip-card {
     background-color: transparent;
     width: 280px;
@@ -105,4 +111,17 @@ body.dark-mode {
 .dark-mode footer {
     background: #131326;
     color: #999;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: 340px;
+        height: 160px;
+    }
 }
