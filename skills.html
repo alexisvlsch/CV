@@ -126,7 +126,23 @@
 
   <footer>
     &copy; 2025 Alexis Viallesseche. Tous droits réservés.
+    &nbsp;|&nbsp;
+    <button id="legal-modal-open" class="footer-link">Mentions légales</button>
   </footer>
+
+  <div id="legal-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+    <div class="modal">
+      <button id="legal-modal-close" class="modal-close" aria-label="Fermer">&times;</button>
+      <h2 id="legal-modal-title">Mentions légales &amp; Politique de confidentialité</h2>
+      <p><strong>Responsable de la publication :</strong> Alexis Viallesseche — <a href="mailto:alexis.viallesseche@example.com">alexis.viallesseche@example.com</a></p>
+      <p><strong>Hébergement :</strong> Ce site est hébergé par GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis).</p>
+      <p><strong>Propriété intellectuelle :</strong> L'ensemble des contenus présents sur ce site (textes, images, CV) est la propriété exclusive d'Alexis Viallesseche. Toute reproduction sans autorisation est interdite.</p>
+      <p><strong>Politique de confidentialité :</strong> Ce site ne collecte aucune donnée personnelle. Aucun cookie de traçage n'est utilisé. Les données éventuellement saisies dans un formulaire de contact ne sont utilisées qu'à des fins de réponse et ne sont pas transmises à des tiers.</p>
+      <p><strong>Limitation de responsabilité :</strong> L'auteur s'efforce de maintenir les informations publiées exactes et à jour, mais ne peut garantir l'exhaustivité ou l'absence d'erreur des contenus. Les liens externes présents sur ce site renvoient vers des sites tiers dont l'auteur ne maîtrise pas le contenu.</p>
+    </div>
+  </div>
+
   <script src="documents/darkMode.js"></script>
+  <script src="documents/legalModal.js"></script>
 </body>
 </html>
