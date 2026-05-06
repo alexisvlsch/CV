@@ -1,3 +1,85 @@
+/* ===== Modal Mentions légales ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: var(--card-bg, white);
+  color: var(--text-color, #1f1f1f);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #0058a3;
+  padding-bottom: 0.5rem;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color, #1f1f1f);
+  line-height: 1;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #0058a3;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+  font-family: inherit;
+}
+
+.footer-link:hover {
+  color: #003366;
+}
+
+.dark-mode .footer-link {
+  color: #7db8f7;
+}
+
+.dark-mode .footer-link:hover {
+  color: #aad4ff;
+}
+
 /* Réinitialisation et styles de base */
 * {
   margin: 0;
