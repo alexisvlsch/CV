@@ -476,6 +476,16 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .pc-card {
+    animation: none;
+  }
+
+  .pc-shine {
+    animation: none;
+  }
+}
+
 @media (max-width: 320px) {
   .pc-card-wrapper {
     width: 260px;

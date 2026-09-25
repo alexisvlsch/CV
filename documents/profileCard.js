@@ -15,7 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const card = document.querySelector('.pc-card');
   
   if (!cardWrapper || !card) return;
-  
+
+  // Apply the holographic gradients & sparkle mask (previously defined but never injected)
+  cardWrapper.style.setProperty('--behind-gradient', DEFAULT_BEHIND_GRADIENT);
+  cardWrapper.style.setProperty('--inner-gradient', DEFAULT_INNER_GRADIENT);
+  cardWrapper.style.setProperty('--icon', `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")`);
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   let rafId = null;
   
   // Update card transform
@@ -68,30 +76,36 @@ document.addEventListener('DOMContentLoaded', () => {
     rafId = requestAnimationFrame(animationLoop);
   };
 
-  // Event handlers
-  card.addEventListener('pointermove', (event) => {
-    const rect = card.getBoundingClientRect();
-    updateCardTransform(event.clientX - rect.left, event.clientY - rect.top);
-  });
+  // Event handlers (tilt only for mice/trackpads so touch scroll isn't hijacked)
+  if (canHover) {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      updateCardTransform(event.clientX - rect.left, event.clientY - rect.top);
+    });
 
-  card.addEventListener('pointerenter', () => {
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-      rafId = null;
-    }
-    cardWrapper.classList.add('active');
-    card.classList.add('active');
-  });
+    card.addEventListener('pointerenter', () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      cardWrapper.classList.add('active');
+      card.classList.add('active');
+    });
 
-  card.addEventListener('pointerleave', (event) => {
-    createSmoothAnimation(600, event.offsetX, event.offsetY);
-    cardWrapper.classList.remove('active');
-    card.classList.remove('active');
-  });
+    card.addEventListener('pointerleave', (event) => {
+      createSmoothAnimation(600, event.offsetX, event.offsetY);
+      cardWrapper.classList.remove('active');
+      card.classList.remove('active');
+    });
+  } else {
+    card.style.touchAction = 'pan-y';
+  }
 
   // Initial animation
   const initialX = cardWrapper.clientWidth - 70;
   const initialY = 60;
   updateCardTransform(initialX, initialY);
-  createSmoothAnimation(1500, initialX, initialY);
+  if (!prefersReducedMotion) {
+    createSmoothAnimation(1500, initialX, initialY);
+  }
 });
