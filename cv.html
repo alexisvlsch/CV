@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV - Alexis Viallesseche</title>
+  <title data-i18n="cv.pageTitle">CV - Alexis Viallesseche</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/cv.css">
 
@@ -11,11 +11,11 @@
 <body>
   <nav>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="gallery.html">Galerie</a></li>
-      <li><a href="skills.html">Compétences</a></li>
-      <li><a href="projects.html">Projets</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="cv.html" data-i18n="nav.cv">CV</a></li>
+      <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">Projets</a></li>
     </ul>
     <div class="theme-switch-wrapper">
       <label class="theme-switch">
@@ -39,6 +39,12 @@
         </div>
       </label>
     </div>
+    <div class="lang-switch-wrapper">
+      <button id="langToggle" type="button" class="lang-switch" aria-label="Changer la langue / Switch language">
+        <span class="lang-option" data-lang="fr">FR</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+    </div>
   </nav>
 
   <main class="container">
@@ -47,15 +53,15 @@
     <section class="profile">
       <img src="images/photoprofil.jpeg" alt="Photo de profil" width="200" height="200">
       <div class="info-perso">
-        <p><strong>Adresse :</strong>09500 la bastide de bousignac</p>
-        <p><strong>Email :</strong> <a href="mailto:viallessechea@gmail.com">viallessechea@gmail.com</a></p>
-        <p><strong>Téléphone :</strong> 07 66 65 16 86</p>
-        <p><strong>LinkedIn :</strong> <a href="www.linkedin.com/in/alexis-viallesseche-67ab5030a/" target="_blank">Alexis Viallesseche</a></p>
-        <p><strong>Permis :</strong> B</p>
+        <p data-i18n-html="cv.address"><strong>Adresse :</strong> 09500 la bastide de bousignac</p>
+        <p data-i18n-html="cv.email"><strong>Email :</strong> <a href="mailto:viallessechea@gmail.com">viallessechea@gmail.com</a></p>
+        <p data-i18n-html="cv.phone"><strong>Téléphone :</strong> 07 66 65 16 86</p>
+        <p data-i18n-html="cv.linkedin"><strong>LinkedIn :</strong> <a href="www.linkedin.com/in/alexis-viallesseche-67ab5030a/" target="_blank">Alexis Viallesseche</a></p>
+        <p data-i18n-html="cv.license"><strong>Permis :</strong> B</p>
 
         <div class="download-wrapper">
           <button class="button" type="button" onclick="downloadCV()">
-            <span class="button__text">Télécharger mon CV en pdf</span>
+            <span class="button__text" data-i18n="cv.downloadBtn">Télécharger mon CV en pdf</span>
             <span class="button__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="download-icon" data-name="Layer 2" class="svg">
                 <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
@@ -69,46 +75,46 @@
     </section>
 
     <section>
-      <h2>Expériences</h2>
+      <h2 data-i18n="cv.experiences">Expériences</h2>
       <ul class="experience-list">  
-        <li><strong>CEMES/CNRS :</strong> Ingénieur d'étude DevOps R&amp;D — Stage de 3 mois (avril-juillet 2026)</li>
-        <li><strong>CHIVA :</strong> ASH (2022) & ASI (2024)</li>
-        <li><strong>Recaero, Verniolle :</strong> Stage d’observation (3ème)</li>
-        <li><strong>Pisciculture Montbel :</strong> Ouvrier polyvalent</li>
-        <li><strong>Village des Sciences :</strong> Animateur scientifique (2023)</li>
-        <li><strong>Club robotique :</strong> Membre actif (2015-2025)</li>
+        <li data-i18n-html="cv.exp1"><strong>CEMES/CNRS :</strong> Ingénieur d'étude DevOps R&amp;D — Stage de 3 mois (avril-juillet 2026)</li>
+        <li data-i18n-html="cv.exp2"><strong>CHIVA :</strong> ASH (2022) &amp; ASI (2024)</li>
+        <li data-i18n-html="cv.exp3"><strong>Recaero, Verniolle :</strong> Stage d’observation (3ème)</li>
+        <li data-i18n-html="cv.exp4"><strong>Pisciculture Montbel :</strong> Ouvrier polyvalent</li>
+        <li data-i18n-html="cv.exp5"><strong>Village des Sciences :</strong> Animateur scientifique (2023)</li>
+        <li data-i18n-html="cv.exp6"><strong>Club robotique :</strong> Membre actif (2015-2025)</li>
       </ul>
     </section>
 
     <section>
-      <h2>Formation</h2>
+      <h2 data-i18n="cv.education">Formation</h2>
       <ul class="formation-list">
-        <li><strong>Université Pazmany Peter Catholique ( PPKE ITK, Hongrie ) :</strong> Master 2 (2026/2027)</li>
-        <li><strong>Upssitech Toulouse :</strong> École d’ingénieur (2024-2027)</li>
-        <li><strong>Université de Toulouse:</strong> TOEIC - 800 (B2)</li>
-        <li><strong>Université Paul Sabatier :</strong> Prépa MPI (2022-2024)</li>
-        <li><strong>Cité scolaire de Mirepoix :</strong> Bac S - Mention bien</li>
-        <li><strong>Candidat libre :</strong> Brevet d'initiation à l'aeronautique - Mention Très bien</li>
-        <li><strong>Cité scolaire de Mirepoix :</strong> PSC1 (2019)</li>
+        <li data-i18n-html="cv.edu1"><strong>Université Pazmany Peter Catholique ( PPKE ITK, Hongrie ) :</strong> Master 2 (2026/2027)</li>
+        <li data-i18n-html="cv.edu2"><strong>Upssitech Toulouse :</strong> École d’ingénieur (2024-2027)</li>
+        <li data-i18n-html="cv.edu3"><strong>Université de Toulouse:</strong> TOEIC - 800 (B2)</li>
+        <li data-i18n-html="cv.edu4"><strong>Université Paul Sabatier :</strong> Prépa MPI (2022-2024)</li>
+        <li data-i18n-html="cv.edu5"><strong>Cité scolaire de Mirepoix :</strong> Bac S - Mention bien</li>
+        <li data-i18n-html="cv.edu6"><strong>Candidat libre :</strong> Brevet d'initiation à l'aeronautique - Mention Très bien</li>
+        <li data-i18n-html="cv.edu7"><strong>Cité scolaire de Mirepoix :</strong> PSC1 (2019)</li>
       </ul>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Alexis Viallesseche. Tous droits réservés.
+    <span data-i18n="footer.rights">© 2025 Alexis Viallesseche. Tous droits réservés.</span>
     &nbsp;|&nbsp;
-    <button id="legal-modal-open" class="footer-link">Mentions légales</button>
+    <button id="legal-modal-open" class="footer-link" data-i18n="footer.legal">Mentions légales</button>
   </footer>
 
   <div id="legal-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
     <div class="modal">
-      <button id="legal-modal-close" class="modal-close" aria-label="Fermer">&times;</button>
-      <h2 id="legal-modal-title">Mentions légales &amp; Politique de confidentialité</h2>
-      <p><strong>Responsable de la publication :</strong> Alexis Viallesseche — <a href="mailto:alexis.viallesseche@example.com">alexis.viallesseche@example.com</a></p>
-      <p><strong>Hébergement :</strong> Ce site est hébergé par GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis).</p>
-      <p><strong>Propriété intellectuelle :</strong> L'ensemble des contenus présents sur ce site (textes, images, CV) est la propriété exclusive d'Alexis Viallesseche. Toute reproduction sans autorisation est interdite.</p>
-      <p><strong>Politique de confidentialité :</strong> Ce site ne collecte aucune donnée personnelle. Aucun cookie de traçage n'est utilisé. Les données éventuellement saisies dans un formulaire de contact ne sont utilisées qu'à des fins de réponse et ne sont pas transmises à des tiers.</p>
-      <p><strong>Limitation de responsabilité :</strong> L'auteur s'efforce de maintenir les informations publiées exactes et à jour, mais ne peut garantir l'exhaustivité ou l'absence d'erreur des contenus. Les liens externes présents sur ce site renvoient vers des sites tiers dont l'auteur ne maîtrise pas le contenu.</p>
+      <button id="legal-modal-close" class="modal-close" data-i18n-attr="aria-label:legal.close" aria-label="Fermer">&times;</button>
+      <h2 id="legal-modal-title" data-i18n-html="legal.title">Mentions légales &amp; Politique de confidentialité</h2>
+      <p data-i18n-html="legal.publisher"><strong>Responsable de la publication :</strong> Alexis Viallesseche — <a href="mailto:viallessechea@gmail.com">viallessechea@gmail.com</a></p>
+      <p data-i18n-html="legal.hosting"><strong>Hébergement :</strong> Ce site est hébergé par GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis).</p>
+      <p data-i18n-html="legal.ip"><strong>Propriété intellectuelle :</strong> L'ensemble des contenus présents sur ce site (textes, images, CV) est la propriété exclusive d'Alexis Viallesseche. Toute reproduction sans autorisation est interdite.</p>
+      <p data-i18n-html="legal.privacy"><strong>Politique de confidentialité :</strong> Ce site ne collecte aucune donnée personnelle. Aucun cookie de traçage n'est utilisé. Les données éventuellement saisies dans un formulaire de contact ne sont utilisées qu'à des fins de réponse et ne sont pas transmises à des tiers.</p>
+      <p data-i18n-html="legal.liability"><strong>Limitation de responsabilité :</strong> L'auteur s'efforce de maintenir les informations publiées exactes et à jour, mais ne peut garantir l'exhaustivité ou l'absence d'erreur des contenus. Les liens externes présents sur ce site renvoient vers des sites tiers dont l'auteur ne maîtrise pas le contenu.</p>
     </div>
   </div>
 
@@ -127,5 +133,6 @@
   </script>
   <script src="documents/darkMode.js"></script>
   <script src="documents/legalModal.js"></script>
+  <script src="documents/i18n.js"></script>
 </body>
 </html>

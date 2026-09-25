@@ -216,6 +216,53 @@ nav {
   align-items: center;
 }
 
+/* Toggle de langue FR/EN, à côté du toggle dark mode */
+.lang-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(127, 127, 127, 0.15);
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 999px;
+  padding: 3px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.lang-switch .lang-option {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-color, #1f1f1f);
+  opacity: 0.5;
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.lang-switch .lang-option.active {
+  background: var(--heading-color, #003366);
+  color: #fff;
+  opacity: 1;
+}
+
+.dark-mode .lang-switch {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .lang-switch-wrapper {
+    margin-left: 0.5rem;
+  }
+}
+
 /* Adaptation pour les éléments du site en mode sombre */
 .card {
   background: var(--card-bg);
