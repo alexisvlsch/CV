@@ -83,6 +83,10 @@ const TRANSLATIONS = {
   "gallery.h1": { fr: "Galerie Photo", en: "Photo Gallery" },
   "gallery.img1Alt": { fr: "Projet robotique", en: "Robotics project" },
   "gallery.img2Alt": { fr: "Stage pisciculture", en: "Fish farming internship" },
+  "gallery.img3Alt": { fr: "Rugby", en: "Rugby" },
+  "gallery.img4Alt": { fr: "Soudure", en: "Welding" },
+  "gallery.img5Alt": { fr: "Université Pázmány Péter (Budapest)", en: "Pázmány Péter Catholic University (Budapest)" },
+  "gallery.img6Alt": { fr: "CEMES-CNRS (Toulouse)", en: "CEMES-CNRS (Toulouse)" },
 
   "projects.pageTitle": { fr: "Projets - Alexis Viallesseche", en: "Projects - Alexis Viallesseche" },
   "projects.h1": { fr: "Mes Projets", en: "My Projects" },
